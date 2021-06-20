@@ -1,5 +1,5 @@
 import preprocess from 'svelte-preprocess';
-import node from '@sveltejs/adapter-node';
+import vercel from './adapter.js'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -11,10 +11,10 @@ const config = {
     // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte',
 
-    adapter: node(),
+    adapter: vercel(),
 
     vite: {
-      define: { 'process.env.DOCKER': process.env.DOCKER },
+      define: { 'process.env.VERCEL': process.env.VERCEL },
     },
   },
 };

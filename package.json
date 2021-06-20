@@ -12,6 +12,7 @@
     "crawl": "npx tsc --noEmit -p scripts/tsconfig.json && npx esbuild --bundle scripts/index.ts --platform=node | node"
   },
   "devDependencies": {
+    "@sveltejs/adapter-vercel": "next",
     "@sveltejs/adapter-node": "^1.0.0-next.25",
     "@sveltejs/kit": "^1.0.0-next.115",
     "@types/cookie": "^0.4.0",
